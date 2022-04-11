@@ -16,7 +16,7 @@ var frb = firebase.auth();
 frb.onAuthStateChanged(user => {
   if (user) {
 
-   
+   document.getElementById("mainWpAdmin").style.display = "block";
             ////
    }
             

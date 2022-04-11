@@ -130,3 +130,43 @@ function AccountLogin(){
 
                 }
              
+
+
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+
+if(MenuItems.style.maxHeight == "0px"){
+    MenuItems.style.maxHeight = "200px";
+
+}
+
+else{
+
+
+    MenuItems.style.maxHeight = "0px";
+}
+
+    }
+
+
+//////------------Js For Toggel From--////
+
+var Loginform = document.getElementById("Loginform");
+var Regform = document.getElementById("Regform");
+var Indicatior = document.getElementById("Indicatior");
+
+function register(){
+    Regform.style.transform = "translateX(0px)"
+    Loginform.style.transform = "translateX(0px)"
+    Indicatior.style.transform = "translateX(100px)"
+}
+
+function login(){
+    Regform.style.transform = "translateX(300px)"
+    Loginform.style.transform = "translateX(300px)"
+    Indicatior.style.transform = "translateX(0px)"
+
+}

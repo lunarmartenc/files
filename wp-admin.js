@@ -11,6 +11,22 @@ firebase.initializeApp(config);
 
 
 
+var frb = firebase.auth();
+frb.onAuthStateChanged(user => {
+  if (user) {
+
+   
+            ////
+   }
+            
+        else {
+
+       window.location.href = "account.html";      
+    // No user is signed in.
+  }
+});
+
+
 
     $(document).ready(()=>{
   

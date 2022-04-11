@@ -1,5 +1,6 @@
-var config = {
-  apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
+   
+        var config = {
+    apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
     authDomain: "lunarmart-e2410.firebaseapp.com",
     databaseURL: "https://lunarmart-e2410-default-rtdb.firebaseio.com",
     projectId: "lunarmart-e2410",
@@ -7,8 +8,8 @@ var config = {
     messagingSenderId: "168416542459",
     appId: "1:168416542459:web:f87ecc908ab27668b27a5e",
     measurementId: "G-1SR896B8LE"
+        };
 firebase.initializeApp(config);
-
 
 
 var frb = firebase.auth();
@@ -95,3 +96,5 @@ document.getElementById("pathlink2").href = "post-new.html?="+randomPath;
 
 })(document);
 
+
+    

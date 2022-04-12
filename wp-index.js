@@ -157,7 +157,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
   '<body><div id="FullBody">'+
      
       '<div class="conteainer"><div class="nevbar">'+
-          '<div class="logo"><a href="/"><img src="https://i.ibb.co/QHMHhVP/logo.png" width="125px" alt="none"></div>'+
+          '<div class="logo"><a href="/"><img src="https://drive.google.com/uc?export=download&id=1N7DSq9ecj8O7yxSuaZHnrxqFrgKQjrnf" width="125px" alt="none"></div>'+
           
           '<nav ><ul id="MenuItems">'+
               '<li><a href="/">Home</a></li>'+
@@ -166,8 +166,8 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
               '<li><a href="/" style="margin-left: 15px;">About</a></li>'+
               '<li><a href="/p/account.html" style="margin-left: 15px;">Account</a></li>'+
           '</ul></nav>'+
-          '<a href="#" class="cart"><img src="https://i.ibb.co/yNkSMm0/cart.png" width="30px" height="30px"><span style="display: none;" id="cardbandge" class="counter"></span></a>'+
-          '<img src="https://i.ibb.co/XWVL9Dm/menu.png" class="menu-icon" onclick="menutoggle()">'+
+          '<a href="#" class="cart"><img src="https://drive.google.com/uc?export=download&id=1JwuhTXUky7dEdHRjYmVuKNadnICZ7G91" width="30px" height="30px"><span style="display: none;" id="cardbandge" class="counter"></span></a>'+
+          '<img src="https://drive.google.com/uc?export=download&id=1Mh3ComNECck578M7LByP0Tr7eIMhUsmv" class="menu-icon" onclick="menutoggle()">'+
           '</div>'+
      '</div>'+
   
@@ -248,14 +248,13 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
          '<div class="footer-col-1">'+
   '<h3>Download Our App</h3>'+
   '<div class="apps-logo">'+
-  '<img src="https://i.ibb.co/pZ0zVSW/app-store.png">'+
-  '<img src="https://i.ibb.co/3R8rdbs/play-store.png">'+
+  '<img src="https://drive.google.com/uc?export=download&id=14JuF-bugi7Cqzxl9_53C0rQleSWpdzIj">'+
   '</div>'+
   
-  '<p>Download apps for iso and android mobile phone</p>'+
+  '<p>Download apps for android mobile phone</p>'+
   '</div>'+
   '<div class="footer-col-2">'+
-      '<img src="https://i.ibb.co/LdLMgLQ/logo-white.png">'+
+      '<img src="https://drive.google.com/uc?export=download&id=1Au46_KU-v609tQxtl-8eX0sKmknAXAcg">'+
       
       '<p>Mymenshing Ck Gosh Rod 36A</p>'+
       '</div>'+
@@ -281,12 +280,12 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
               '</ul>'+
               '</div></div>'+
   
-      '<hr><p class="Copyright"> Copyright 2022 - TevHut </p></hr>'+
+      '<hr><p class="Copyright"> Copyright 2022 - LunarMart </p></hr>'+
   '</div>'+
   '</div>'+
   
   '<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>'+
-  '<script src="https://niloynkj.github.io/e-commerce/product-details.js"></script>'+
+  '<script src="https://lunarmartenc.github.io/files/product-details.js"></script>'+
   
   '<!-- MaterializeCSS and it"s javascript file for the visual front-end -->'+
                 

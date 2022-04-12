@@ -130,7 +130,7 @@ $(document).ready(()=>{
 function sendEmail(e) {
   e.preventDefault();
 
-  const POST_URL = 'https://script.google.com/macros/s/AKfycbyZPpMx9Uw0mP72kHYMPp2iOXpkXPG3tQrQmp4cdMdE3EXd4dhvr1NUWOQl5UfoGQDzSQ/exec';
+  const POST_URL = 'https://script.google.com/macros/s/AKfycbyY-YoVwPav-zNj30yO094OhjTe5aOjmFNMTzPXnRcpz4EXHeHA18UqqIOinhMCLClO/exec';
 
   const postRequest = {
     name: e.target['name'].value,
@@ -149,19 +149,17 @@ function sendEmail(e) {
 })}}
 
 
-  
-  var config = {
-    apiKey: "AIzaSyCWGbJi9qeD7h6BPhAKBoWupHv21Tge3ck",
-    authDomain: "effort-5efac.firebaseapp.com",
-    databaseURL: "https://effort-5efac.firebaseio.com",
-    projectId: "effort-5efac",
-    storageBucket: "effort-5efac.appspot.com",
-    messagingSenderId: "771931121287",
-    appId: "1:771931121287:web:9fe9abdcab7c369f277a22",
-    measurementId: "G-GLD9CY5VPF"
-  };
-  firebase.initializeApp(config);
-  
+var config = {
+    apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
+    authDomain: "lunarmart-e2410.firebaseapp.com",
+    databaseURL: "https://lunarmart-e2410-default-rtdb.firebaseio.com",
+    projectId: "lunarmart-e2410",
+    storageBucket: "lunarmart-e2410.appspot.com",
+    messagingSenderId: "168416542459",
+    appId: "1:168416542459:web:f87ecc908ab27668b27a5e",
+    measurementId: "G-1SR896B8LE"
+        };
+firebase.initializeApp(config);
   
   //////////////Firebase-uSER Data INFO LOAD//////////////
   
@@ -170,7 +168,7 @@ function sendEmail(e) {
   //////////////Firebase-POST DATA  LOAD//////////////
   var pathlink2 = window.location.href;
   
-  var Fpath2 = pathlink2.replace("http://localhost/blogger/admin/post-new.html?=", "");
+  var Fpath2 = pathlink2.replace("https://lunarmart.blogspot.com/post-new.html?=", "");
   
   var TagFolder = "BE-commerce/Post/"+Fpath2;
 
@@ -296,7 +294,7 @@ var RED7 = firebase.database().ref(TagFolder).child('imgs3');
   var imgs2 = document.getElementById("imgs2").src;
   var imgs3 = document.getElementById("imgs3").src;
   
-  if (title=="" || content =="" || catagory =="" || price =="" || availity=="" || imgs == "http://localhost/blogger/admin/null" || imgs ==""  ||  imgs =="https://i.gifer.com/ZZ5H.gif" )
+  if (title=="" || content =="" || catagory =="" || price =="" || availity=="" || imgs == "https://lunarmart.blogspot.com/null" || imgs ==""  ||  imgs =="https://i.gifer.com/ZZ5H.gif" )
   {
   
     alert("No Data Detect")
@@ -334,7 +332,7 @@ window.location.href = "draf-product.html"
   function Published(){
   
   
-      location.href = "http://localhost/blogger/admin/post-published.html?="+Fpath2;
+      location.href = "https://lunarmart.blogspot.com/post-published.html?="+Fpath2;
   
   
   }

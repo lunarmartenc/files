@@ -240,8 +240,7 @@ firebase.initializeApp(config);
       var token =(length)=>(rand()+rand()+rand()+rand()).substr(0,length);
       var randomPath = (token(40));
       
-      document.getElementById("pathlink").href = "/blogger/post-new.html?="+randomPath;
-      document.getElementById("pathlink2").href = "/blogger/post-new.html?="+randomPath;
+      document.getElementById("pathlink2").href = "post-new.html?="+randomPath;
       
       
       

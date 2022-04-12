@@ -1,4 +1,6 @@
-$(document).ready(()=>{
+
+  
+  $(document).ready(()=>{
   
     $('#open-sidebar').click(()=>{
        
@@ -168,9 +170,10 @@ firebase.initializeApp(config);
   //////////////Firebase-POST DATA  LOAD//////////////
   var pathlink2 = window.location.href;
   
-  var Fpath2 = pathlink2.replace("https://lunarmart.blogspot.com/post-new.html?=", "");
+  var Fpath2 = pathlink2.replace("https://lunarmart.blogspot.com/p/post-new.html?=", "");
   
   var TagFolder = "BE-commerce/Post/"+Fpath2;
+        
 
   var RED = firebase.database().ref(TagFolder).child('title');
             RED.on('value', function(snapshot) {
@@ -290,12 +293,11 @@ var RED7 = firebase.database().ref(TagFolder).child('imgs3');
   var availity = document.getElementById("availity").value;
   
   var imgs = document.getElementById("imgs").src;
-	  alert(imgs)
   var imgs1 = document.getElementById("imgs1").src;
   var imgs2 = document.getElementById("imgs2").src;
   var imgs3 = document.getElementById("imgs3").src;
   
-  if (title=="" || content =="" || catagory =="" || price =="" || availity=="" || imgs == "https://lunarmart.blogspot.com/null" || imgs ==""  ||  imgs =="https://i.gifer.com/ZZ5H.gif" )
+  if (title=="" || content =="" || catagory =="" || price =="" || imgs ==""  || imgs == "https://lunarmart.blogspot.com/p/null"  ||  imgs =="https://i.gifer.com/ZZ5H.gif" )
   {
   
     alert("No Data Detect")
@@ -414,3 +416,6 @@ window.location.href = "draf-product.html"
 
 })(document);
       
+
+  
+  

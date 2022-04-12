@@ -1,4 +1,4 @@
-*{
+ *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -6,7 +6,8 @@ box-sizing: border-box;
 
 body{
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: &#39;Open Sans&#39;, sans-serif;
+
 }
 
 .nevbar {
@@ -44,9 +45,9 @@ p{
 .conteainer{
 
 max-width: 13000px;
-margin: auto;
-padding-right: 25;
-padding-left: 25;
+margin: auto 25px;
+padding-right: 25px;
+padding-left: 25px;
 
 }
 
@@ -72,18 +73,22 @@ padding: 50px 0;
 .col-2 h1{
 font-size: 50px;
 line-height: 60px;
-margin: 25px 0;
-
+margin: 25px 25px;
 
 }
+  
+ .col-2 p{
+  line-height: 20px;
+  margin: 25px 25px;
+  }
 
 .btn {
 
 display: inline-block;
 background: #ff523b;
-color: fff;
+color: #fff;
 padding: 8px 30px;
-margin: 30px 0;
+margin: 25px 25px;
 border-radius: 30px 0;
 transform: background 05s;
 }
@@ -155,7 +160,7 @@ width: 100%;
 
 .title::after{
 
-    content: "";
+    content: &quot;&quot;;
     background: #ff523b;
     width: 80px;
     height: 5px;
@@ -177,9 +182,9 @@ h4 {
 font-size: 14px;
 }
 
-.rating .fa{
-
-    color: #ff523b;
+.rating p{
+    padding: 10px 0;
+    color: #2d48fa;
 }
 
 .col-4:hover{
@@ -485,7 +490,7 @@ cursor: pointer;
 
 .cart-page{
 
-    margin: 10px auto;
+    margin: 80px auto;
 }
 table{
 width: 100%;
@@ -497,23 +502,6 @@ border-collapse: collapse;
 
     display: flex;
     flex-wrap: wrap;
-}
-.cart-info button{
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    background-color: #ddd;
-    color: #007582;
-    border-radius: 1.5em;
-    margin-right: 2px;
-    margin-bottom: 10px;
-    border: none;
-    cursor: pointer;
-    padding: .5em 1em;
-    font-family: sans-serif;
-    padding: 2px 12px;
-
-
 }
 
 th{
@@ -576,6 +564,7 @@ th:last-child{
 
 /*--------Account Friendly------*/
 
+
 .account-page{
 padding: 50px 0;
 background: radial-gradient(#fff, #ffd6d6);
@@ -584,7 +573,7 @@ background: radial-gradient(#fff, #ffd6d6);
 
 .from-contener{
 background: #fff;
-height: 450px;
+height: 400px;
 width: 300px;
 position: relative;
 text-align: center;
@@ -833,7 +822,7 @@ display: none;
 
 
 .btnComplite-reject {
-    display: none;
+
     padding-bottom: 25px;
 }
 
@@ -885,7 +874,7 @@ display: none;
 	-webkit-box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
 }
 
-a.cart > span {
+a.cart &gt; span {
 	width: 24px;
 	height: 24px;
 	font-size: 16px;
@@ -904,88 +893,11 @@ a.cart > span {
 	background: rgb(250, 2, 2);
 }
 
-a.cart > span.counter {
+a.cart &gt; span.counter {
 	left: 30px;
 	bottom: 48px;
 }
 
-
-.pagination-div{
-    margin-left:20px;
-    
-}
-
-
-.paginationclass{
-    margin: 15px 28px; 
-    list-style-type:none;
-    border-bottom:1px solid black;
-    font-weight:bold;
-     }
-     .paginationclass1{
-    margin: 15px 28px; 
-    list-style-type:none;
-    border-bottom:1px solid black;
-    
-     }
-    .paginationclass div{
-        border-bottom:1px solid silver;
-        
-    }
-    .paginationclass1 div{
-        border-bottom:1px solid silver;
-        
-    }
-    .paginationclass span{
-        margin:0px 15px;
-        display:inline-block;
-        padding:5px 0px;
-        text-align:center;
-        width:70px;
-    }
-    .paginationclass1 span{
-        margin:0px 15px;
-        display:inline-block;
-        padding:5px 0px;
-        text-align:center;
-        width:70px;
-    }
-    .pagination-controle li{
-        display: inline-block;
-        
-    }
-    .pagination-controle button{
-        width: 63px;
-        font-size: 12px;
-        margin-left: 13px;
-        cursor:pointer;
-    }
-    .pagination-div{
-        margin-left:20px;
-        
-    }
-    
-    
-    .pagination{
-      list-style-type:none;
-    }
-    .pagination>li>a {
-        
-        text-decoration:none;
-    }
-    
-    .list{
-      display: inline-block;
-      padding: 5px;
-      color: white;
-      font-size: 14px;
-      font-weight: normal;
-      background: #A197F8;
-      cursor: pointer;
-      position: relative;
-      border-radius: 4px 4px 4px 4px;
-    }
-    
 
 /*--------Mobile Friendly------*/
 
@@ -1028,7 +940,6 @@ display: none;
 }
 
 
-
 /*media query for less then  600 screen size*/
 
 
@@ -1062,10 +973,6 @@ text-align: left;
 .cart-info p{
 display: none;
 }
-
-
-.containerd{
-    padding-left: 2%;
-
 }
-}
+
+  

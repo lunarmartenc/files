@@ -11,15 +11,12 @@ var config = {
 firebase.initializeApp(config);
 
 
-  
-  
+
   //////////////Firebase-Pathlod//////////////
   
-  var pathlink = (window.location != window.parent.location)
-    ? document.referrer
-    : document.location.href;
-  
-  var Fpath = pathlink.replace("https://lunarmart.blogspot.com/p/post-published.html?=", "");
+  var pathlink = location.href;
+
+  var Fpath = pathlink.replace("https://lunarmart.000webhostapp.com/index.php?=", "");
   
   
   var Fpathstore = localStorage.getItem("Fpath");
@@ -149,7 +146,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
       '<meta property="og:title"              content="'+title+'" />'+
       '<meta property="og:description"        content="'+content+'" />'+
       '<meta property="og:image"              content="'+imgs+'"/>'+
-  
+  '<link href="https://lunarmartenc.github.io/files/style.css" rel="stylesheet"/>'+
   '<link rel="preconnect" href="https://fonts.googleapis.com">'+
   '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'+
   '<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">'+
@@ -305,7 +302,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
   '<!-- FirebaseApp and FirebaseDatabase so we can communicate with the firebase service -->'+
   '<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>'+
   '<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-database.js"></script>'+
-  '<script src="https://niloynkj.github.io/e-commerce/aplrc.js"></script>'+
+  '<script src="https://lunarmartenc.github.io/files/aplrc.js"></script>'+
   
   '</div></body>'+
   
@@ -369,7 +366,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
   //////////////////Auto-Click//////////////////
       
   var text = document.getElementById("ptlink").innerHTML;
-    var wurl = position = text.search("wesuzz.blogspot.com"); ///It's Protect To Multi post
+    var wurl = position = text.search("lunarmart.blogspot.com"); ///It's Protect To Multi post
   
   function dopublish(){
     if(wurl == -1){
@@ -381,11 +378,9 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
   function dopublish1(){
   var Stutas = document.getElementById("Stutas").value;
   if (Stutas=="Draft"){
-  var pathlink = (window.location != window.parent.location)
-    ? document.referrer
-    : document.location.href;
+  var pathlink = location.href;
   
-  var Fpath = pathlink.replace("https://lunarmart.blogspot.com/p/post-published.html?=", "");
+  var Fpath = pathlink.replace("https://lunarmart.000webhostapp.com/index.php?=", "");
   
   localStorage.setItem("Fpath", Fpath);
   

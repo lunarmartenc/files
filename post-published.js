@@ -1,3 +1,8 @@
+var wurl = window.location.href;
+ var wurl2= wurl.replace("https://lunarmart.blogspot.com/p/post-published.html?=", "");
+ document.getElementById("Postframe").src = "https://lunarmart.000webhostapp.com/index.php?="+wurl2;
+
+
 var config = {
     apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
     authDomain: "lunarmart-e2410.firebaseapp.com",

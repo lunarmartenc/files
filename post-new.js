@@ -335,7 +335,7 @@ window.location.href = "draf-product.html"
   function Published(){
   
   
-      location.href = "https://lunarmart.blogspot.com/post-published.html?="+Fpath2;
+      location.href = "https://lunarmart.blogspot.com/p/post-published.html?="+Fpath2;
   
   
   }

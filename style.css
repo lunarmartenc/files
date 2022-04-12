@@ -874,7 +874,7 @@ display: none;
 	-webkit-box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
 }
 
-a.cart &gt; span {
+a.cart > span {
 	width: 24px;
 	height: 24px;
 	font-size: 16px;
@@ -893,10 +893,11 @@ a.cart &gt; span {
 	background: rgb(250, 2, 2);
 }
 
-a.cart &gt; span.counter {
+a.cart > span.counter {
 	left: 30px;
 	bottom: 48px;
 }
+
 
 
 /*--------Mobile Friendly------*/

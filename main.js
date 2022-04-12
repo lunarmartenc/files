@@ -15,6 +15,10 @@ document.getElementById("Mcart").src = "https://drive.google.com/uc?export=downl
 document.getElementById("Mmenu").src = "https://drive.google.com/uc?export=download&id=1Mh3ComNECck578M7LByP0Tr7eIMhUsmv";
 document.getElementById("Mplaystor").src = "https://drive.google.com/uc?export=download&id=14JuF-bugi7Cqzxl9_53C0rQleSWpdzIj";
 document.getElementById("Mflogo").src = "https://drive.google.com/uc?export=download&id=1Au46_KU-v609tQxtl-8eX0sKmknAXAcg";
+document.getElementById("mpay1").src = "https://drive.google.com/uc?export=download&id=1D661lDkCLKsiaKokmYpb_pSrmnaNeRKZ";
+document.getElementById("mpay2").src = "https://drive.google.com/uc?export=download&id=1AppL0J5rJqds2UuSyPSpNUI7mwei0UL7";
+document.getElementById("mpay3").src = "https://drive.google.com/uc?export=download&id=1OOqyqpzejjM4DEjQ4j9RZLtmKxtgHPvx";
+document.getElementById("mpay4").src = "https://drive.google.com/uc?export=download&id=1R6VDkfsVkfgGYRdbeIvjO-TUuAROchls";
   
   var TagFolder = "Admin/Catagory";
   var RED1 = firebase.database().ref(TagFolder).child('catagoriimg1');

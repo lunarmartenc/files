@@ -22,19 +22,7 @@ $(document).ready(()=>{
      });
     
   });
-  
-  function Onloddata() {
-  
-  var rand=()=>Math.random(0).toString(36).substr(2);
-  var token =(length)=>(rand()+rand()+rand()+rand()).substr(0,length);
-  var randomPath = (token(40));
-  
-  document.getElementById("pathlink").href = "/blogger/post-new.html?="+randomPath;
-  document.getElementById("pathlink2").href = "/blogger/post-new.html?="+randomPath;
-  
-  
-  
-  }
+
   /////////////////Firebase///////////////////
 var config = {
     apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",

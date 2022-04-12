@@ -290,6 +290,7 @@ var RED7 = firebase.database().ref(TagFolder).child('imgs3');
   var availity = document.getElementById("availity").value;
   
   var imgs = document.getElementById("imgs").src;
+	  alert(imgs)
   var imgs1 = document.getElementById("imgs1").src;
   var imgs2 = document.getElementById("imgs2").src;
   var imgs3 = document.getElementById("imgs3").src;

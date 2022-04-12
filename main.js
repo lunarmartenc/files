@@ -1,14 +1,20 @@
 var config = {
-    apiKey: "AIzaSyCWGbJi9qeD7h6BPhAKBoWupHv21Tge3ck",
-    authDomain: "effort-5efac.firebaseapp.com",
-    databaseURL: "https://effort-5efac.firebaseio.com",
-    projectId: "effort-5efac",
-    storageBucket: "effort-5efac.appspot.com",
-    messagingSenderId: "771931121287",
-    appId: "1:771931121287:web:9fe9abdcab7c369f277a22",
-    measurementId: "G-GLD9CY5VPF"
-  };
-  firebase.initializeApp(config);
+    apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
+    authDomain: "lunarmart-e2410.firebaseapp.com",
+    databaseURL: "https://lunarmart-e2410-default-rtdb.firebaseio.com",
+    projectId: "lunarmart-e2410",
+    storageBucket: "lunarmart-e2410.appspot.com",
+    messagingSenderId: "168416542459",
+    appId: "1:168416542459:web:f87ecc908ab27668b27a5e",
+    measurementId: "G-1SR896B8LE"
+        };
+firebase.initializeApp(config);
+
+document.getElementById("Mlogo").src = "https://drive.google.com/uc?export=download&id=1N7DSq9ecj8O7yxSuaZHnrxqFrgKQjrnf";
+document.getElementById("Mcart").src = "https://drive.google.com/uc?export=download&id=1JwuhTXUky7dEdHRjYmVuKNadnICZ7G91";
+document.getElementById("Mmenu").src = "https://drive.google.com/uc?export=download&id=1Mh3ComNECck578M7LByP0Tr7eIMhUsmv";
+document.getElementById("Mplaystor").src = "https://drive.google.com/uc?export=download&id=14JuF-bugi7Cqzxl9_53C0rQleSWpdzIj";
+document.getElementById("Mflogo").src = "https://drive.google.com/uc?export=download&id=1Au46_KU-v609tQxtl-8eX0sKmknAXAcg";
   
   var TagFolder = "Admin/Catagory";
   var RED1 = firebase.database().ref(TagFolder).child('catagoriimg1');

@@ -1,14 +1,16 @@
 var config = {
-    apiKey: "AIzaSyCWGbJi9qeD7h6BPhAKBoWupHv21Tge3ck",
-    authDomain: "effort-5efac.firebaseapp.com",
-    databaseURL: "https://effort-5efac.firebaseio.com",
-    projectId: "effort-5efac",
-    storageBucket: "effort-5efac.appspot.com",
-    messagingSenderId: "771931121287",
-    appId: "1:771931121287:web:9fe9abdcab7c369f277a22",
-    measurementId: "G-GLD9CY5VPF"
-  };
-  firebase.initializeApp(config);
+    apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
+    authDomain: "lunarmart-e2410.firebaseapp.com",
+    databaseURL: "https://lunarmart-e2410-default-rtdb.firebaseio.com",
+    projectId: "lunarmart-e2410",
+    storageBucket: "lunarmart-e2410.appspot.com",
+    messagingSenderId: "168416542459",
+    appId: "1:168416542459:web:f87ecc908ab27668b27a5e",
+    measurementId: "G-1SR896B8LE"
+        };
+firebase.initializeApp(config);
+
+
   
   
   //////////////Firebase-Pathlod//////////////
@@ -17,7 +19,7 @@ var config = {
     ? document.referrer
     : document.location.href;
   
-  var Fpath = pathlink.replace("http://localhost/blogger/admin/post-published.html?=", "");
+  var Fpath = pathlink.replace("https://lunarmart.blogspot.com/p/post-published.html?=", "");
   
   
   var Fpathstore = localStorage.getItem("Fpath");
@@ -383,7 +385,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
     ? document.referrer
     : document.location.href;
   
-  var Fpath = pathlink.replace("http://localhost/blogger/post-published.html?=", "");
+  var Fpath = pathlink.replace("https://lunarmart.blogspot.com/p/post-published.html?=", "");
   
   localStorage.setItem("Fpath", Fpath);
   

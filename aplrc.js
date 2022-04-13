@@ -610,7 +610,7 @@ var userIDS = localStorage.getItem("UserIDS");
    $scope.currentPage = 0;
    
    var wurl = window.location.href;
-var ScellIDS = wurl.replace("https://lunarmart.blogspot.com/p/checkout-details.html?=", "")
+var ScellIDS = wurl.replace("https://www.lunarmart.xyz/p/checkout-details.html?=", "")
 
  var live = "BE-commerce/Purchase/"+ScellIDS;
   var ref = firebase.database().ref().child(live);

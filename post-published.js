@@ -11,6 +11,28 @@ var config = {
 firebase.initializeApp(config);
 
 
+                var frb = firebase.auth();
+                frb.onAuthStateChanged(user => {
+                  if (user) {
+            var Fuid = user.uid;
+            var TagFolder = "BE-commerce/User/"+Fuid;
+            var RED = firebase.database().ref(TagFolder).child('Position');
+            RED.on('value', function(snapshot) {
+            var Reddata = (snapshot.val());
+			       
+            if(Reddata=="Admin"){
+              
+            }
+            else{
+              window.location.href = "cart.html";
+            }
+          }); 
+        }
+        else {
+		window.location.href = "cart.html"
+                    // No user is signed in.
+                  }
+                });
 
 
     $(document).ready(()=>{

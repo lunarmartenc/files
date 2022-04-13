@@ -1,4 +1,5 @@
-var config = {
+ 
+  var config = {
     apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
     authDomain: "lunarmart-e2410.firebaseapp.com",
     databaseURL: "https://lunarmart-e2410-default-rtdb.firebaseio.com",
@@ -130,14 +131,12 @@ var table = document.getElementById("CartEstimate"), sumVal = 0;
           }
           
     var CartEstimate = sumVal;
-var Ftotalsub = +CartEstimate;
- var Ftotalserv = +Reddata;
- var FTotal = Ftotalsub+Ftotalserv;   
+ 
 document.getElementById("Fsubtotal").innerHTML = CartEstimate;
-document.getElementById("Ftotal").innerHTML = FTotal;
-
+  var est1 = +Reddata;
+ var FTotal = CartEstimate+est1;
+  document.getElementById("Ftotal").innerHTML = FTotal;
 }
-
 
 ///////////////////Quantity Change///////////////////////
 
@@ -353,3 +352,5 @@ MenuItems.style.maxHeight = "0px";
 }
 
 }
+  
+  

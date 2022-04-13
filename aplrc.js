@@ -698,7 +698,7 @@ var targetresult = wurl.replace(targeturl, "");
   $scope.searchProfit   = targetresult;
    $scope.showData = function( ){
   
-   $scope.itemsPerPage = 2;
+   $scope.itemsPerPage = 10;
    $scope.currentPage = 0;
    
    var live = "BE-commerce/Post";
@@ -761,7 +761,89 @@ var targetresult = wurl.replace(targeturl, "");
     
   });
   })();
+
+
+
+
+
+////////CatagoryHome Product-17////
+//////////////////////////
+
+(function() {
   
+    var Categorishome = angular.module('Categorishome', [ "firebase"]);
+  
+  Categorishome.controller('Maincontollercategorishome', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
+
+    $scope.sortType     = 'Date'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+  $scope.searchFish   = '';
+  $scope.searchProfit   = '';
+   $scope.showData = function( ){
+  
+   $scope.itemsPerPage = 3;
+   $scope.currentPage = 0;
+   
+   var live = "BE-commerce/Categoris";
+  var ref = firebase.database().ref().child(live);
+  
+      $scope.pages = $firebaseArray(ref);
+       $scope.range = function() {
+      var rangeSize = 4;
+      var ps = [];
+      var begin;
+  
+      begin = $scope.currentPage;
+      if ( begin > $scope.pageCount()-rangeSize ) {
+        begin = $scope.pageCount()-rangeSize+1;
+      }
+  
+      for (var i=begin; i<begin+rangeSize; i++) {
+        ps.push(i);
+      }
+      return ps;
+    };
+  
+    $scope.prevPage = function() {
+      if ($scope.currentPage > 0) {
+        $scope.currentPage--;
+      }
+    };
+  
+    $scope.DisablePrevPage = function() {
+      return $scope.currentPage === 0 ? "disabled" : "";
+    };
+  
+    $scope.pageCount = function() {
+      return Math.ceil($scope.pages.length/$scope.itemsPerPage)-1;
+    };
+  
+    $scope.nextPage = function() {
+      if ($scope.currentPage < $scope.pageCount()) {
+        $scope.currentPage++;
+      }
+    };
+  
+    $scope.DisableNextPage = function() {
+      return $scope.currentPage === $scope.pageCount() ? "disabled" : "";
+    };
+  
+    $scope.setPage = function(n) {
+      $scope.currentPage = n;
+    };
+  };
+  
+  
+  }]);
+  
+  angular.module('Categorishome').filter('pagination', function(){
+    return function(input, begin) {
+      begin = parseInt(begin, 10);
+      return input.slice(begin);
+    };
+    
+  });
+  })();
 
 
 
@@ -774,6 +856,7 @@ var targetresult = wurl.replace(targeturl, "");
  var sevenDiv = document.getElementById('Checkoutproduct');
  var eightDiv = document.getElementById('Checkoutdetailsproduct');
 var fourteenDiv = document.getElementById('Catagoryproduct');
+var seventeenDiv = document.getElementById('Categorishome');
     
        // manually boostrapping the second app
        angular.element(document).ready(function() {
@@ -786,5 +869,6 @@ var fourteenDiv = document.getElementById('Catagoryproduct');
               angular.bootstrap(sevenDiv, [ 'Checkoutproduct' ]);
               angular.bootstrap(eightDiv, [ 'Checkoutdetailsproduct' ]);
 	       angular.bootstrap(fourteenDiv, [ 'Catagoryproduct' ]);
+	       angular.bootstrap(seventeenDiv, [ 'Categorishome' ]);
 			  });
 	   

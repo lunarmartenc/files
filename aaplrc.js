@@ -23,7 +23,7 @@ firebase.initializeApp(config);
 
 Draftproduct.controller('Maincontollerdraftproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
 
-  $scope.sortType     = 'date'; // set the default sort type
+  $scope.sortType     = 'ID'; // set the default sort type
 $scope.sortReverse  = false;  // set the default sort order
 $scope.searchFish   = 'Draft';
 $scope.searchProfit   = 'Draft';
@@ -104,7 +104,7 @@ angular.module('Draftproduct').filter('pagination', function(){
 
 Publishedproduct.controller('Maincontollerpublishedproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
 
-  $scope.sortType     = 'date'; // set the default sort type
+  $scope.sortType     = 'ID'; // set the default sort type
 $scope.sortReverse  = false;  // set the default sort order
 $scope.searchFish   = 'Live';
 $scope.searchProfit   = 'Live';
@@ -184,7 +184,7 @@ angular.module('Publishedproduct').filter('pagination', function(){
 
 Saleordersproduct.controller('Maincontollersaleordersproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
 
-  $scope.sortType     = 'date'; // set the default sort type
+  $scope.sortType     = 'SellID'; // set the default sort type
 $scope.sortReverse  = false;  // set the default sort order
 $scope.searchFish   = 'Pending';
 $scope.searchProfit   = '';
@@ -267,7 +267,7 @@ var Salecompliteproduct = angular.module('Salecompliteproduct', [ "firebase"]);
 
 Salecompliteproduct.controller('MaincontollerSalecompliteproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
 
-  $scope.sortType     = 'date'; // set the default sort type
+  $scope.sortType     = 'SellID'; // set the default sort type
 $scope.sortReverse  = false;  // set the default sort order
 $scope.searchFish   = 'Complite';
 $scope.searchProfit   = '';

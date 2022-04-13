@@ -358,7 +358,7 @@ $scope.searchProfit   = '';
  $scope.currentPage = 0;
  
  var wurl = window.location.href;
-var ScellIDS = wurl.replace("https://lunarmart.blogspot.com/p/sale-deatils.html?=", "")
+var ScellIDS = wurl.replace("https://www.lunarmart.xyz/p/sale-deatils.html?=", "")
 
 var live = "BE-commerce/Purchase/"+ScellIDS;
 var ref = firebase.database().ref().child(live);

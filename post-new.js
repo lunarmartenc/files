@@ -422,10 +422,10 @@ window.location.href = "draf-product.html"
 
 
 
-
                 var frb = firebase.auth();
                 frb.onAuthStateChanged(user => {
                   if (user) {
+			 
             var Fuid = user.uid;
             var TagFolder = "BE-commerce/User/"+Fuid;
             var RED = firebase.database().ref(TagFolder).child('Position');
@@ -433,7 +433,7 @@ window.location.href = "draf-product.html"
             var Reddata = (snapshot.val());
 			       
             if(Reddata=="Admin"){
-              
+               document.getElementById("mainWpAdmin").style.display = "block";
             }
             else{
               window.location.href = "cart.html";
@@ -445,4 +445,5 @@ window.location.href = "draf-product.html"
                     // No user is signed in.
                   }
                 });
+
   

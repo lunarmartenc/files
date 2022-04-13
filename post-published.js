@@ -1,4 +1,4 @@
-var config = {
+        var config = {
     apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
     authDomain: "lunarmart-e2410.firebaseapp.com",
     databaseURL: "https://lunarmart-e2410-default-rtdb.firebaseio.com",
@@ -99,7 +99,6 @@ function updateBadge(alertNum){//To rerun the animation the element must be re-a
 
 
 function Onloddata() {
-
 var randomPath = Date.now();
 
 document.getElementById("pathlink2").href = "post-new.html?="+randomPath;
@@ -107,5 +106,14 @@ document.getElementById("pathlink2").href = "post-new.html?="+randomPath;
 
 
 }
-
-
+  
+        
+ var hostname = window.location.hostname;
+var pathname = window.location.pathname;
+var targeturl = "https://"+hostname+pathname+"?=";
+var wurl = window.location.href;
+var targetresult = wurl.replace(targeturl, "");
+ 
+        var FrameResult = "https://lunarmart.000webhostapp.com/index.php?="+targetresult;
+        document.getElementById('Postframe').src = FrameResult;
+      

@@ -29,11 +29,13 @@ firebase.initializeApp(config);
           }); 
         }
         else {
-		window.location.href = "cart.html"
+		window.location.href = "account.html"
                     // No user is signed in.
                   }
                 });
 
+
+/////////////////////Menu//////////////////
 
     $(document).ready(()=>{
   

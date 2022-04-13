@@ -677,6 +677,94 @@ var ScellIDS = wurl.replace("https://www.lunarmart.xyz/p/checkout-details.html?=
 
 
 
+////////Catagoryproduct Product-14////
+//////////////////////////
+
+(function() {
+  
+    var Catagoryproduct = angular.module('Catagoryproduct', [ "firebase"]);
+  
+  Catagoryproduct.controller('Maincontollercatagoryproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
+  
+var hostname = window.location.hostname;
+var pathname = window.location.pathname;
+var targeturl = "https://"+hostname+pathname+"?=";
+var wurl = window.location.href;
+var targetresult = wurl.replace(targeturl, "");
+
+    $scope.sortType     = 'date'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+  $scope.searchFish   = 'Live';
+  $scope.searchProfit   = targetresult;
+   $scope.showData = function( ){
+  
+   $scope.itemsPerPage = 2;
+   $scope.currentPage = 0;
+   
+   var live = "BE-commerce/Post";
+  var ref = firebase.database().ref().child(live);
+  
+      $scope.pages = $firebaseArray(ref);
+       $scope.range = function() {
+      var rangeSize = 4;
+      var ps = [];
+      var begin;
+  
+      begin = $scope.currentPage;
+      if ( begin > $scope.pageCount()-rangeSize ) {
+        begin = $scope.pageCount()-rangeSize+1;
+      }
+  
+      for (var i=begin; i<begin+rangeSize; i++) {
+        ps.push(i);
+      }
+      return ps;
+    };
+  
+    $scope.prevPage = function() {
+      if ($scope.currentPage > 0) {
+        $scope.currentPage--;
+      }
+    };
+  
+    $scope.DisablePrevPage = function() {
+      return $scope.currentPage === 0 ? "disabled" : "";
+    };
+  
+    $scope.pageCount = function() {
+      return Math.ceil($scope.pages.length/$scope.itemsPerPage)-1;
+    };
+  
+    $scope.nextPage = function() {
+      if ($scope.currentPage < $scope.pageCount()) {
+        $scope.currentPage++;
+      }
+    };
+  
+    $scope.DisableNextPage = function() {
+      return $scope.currentPage === $scope.pageCount() ? "disabled" : "";
+    };
+  
+    $scope.setPage = function(n) {
+      $scope.currentPage = n;
+    };
+  };
+  
+  
+  }]);
+  
+  angular.module('Catagoryproduct').filter('pagination', function(){
+    return function(input, begin) {
+      begin = parseInt(begin, 10);
+      return input.slice(begin);
+    };
+    
+  });
+  })();
+  
+
+
+
  var firstDiv = document.getElementById('Letest');
  var SecondDiv = document.getElementById('Futureproduct');
  var threeDiv = document.getElementById('Exclusiveproduct');
@@ -685,6 +773,7 @@ var ScellIDS = wurl.replace("https://www.lunarmart.xyz/p/checkout-details.html?=
  var sixDiv = document.getElementById('Cartproduct');
  var sevenDiv = document.getElementById('Checkoutproduct');
  var eightDiv = document.getElementById('Checkoutdetailsproduct');
+var fourteenDiv = document.getElementById('Catagoryproduct');
     
        // manually boostrapping the second app
        angular.element(document).ready(function() {
@@ -696,5 +785,6 @@ var ScellIDS = wurl.replace("https://www.lunarmart.xyz/p/checkout-details.html?=
               angular.bootstrap(sixDiv, [ 'Cartproduct' ]);
               angular.bootstrap(sevenDiv, [ 'Checkoutproduct' ]);
               angular.bootstrap(eightDiv, [ 'Checkoutdetailsproduct' ]);
+	       angular.bootstrap(fourteenDiv, [ 'Catagoryproduct' ]);
 			  });
 	   

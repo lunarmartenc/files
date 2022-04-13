@@ -9,9 +9,35 @@ var config = {
     measurementId: "G-1SR896B8LE"
         };
 firebase.initializeApp(config);
+
+
+
+                var frb = firebase.auth();
+                frb.onAuthStateChanged(user => {
+                  if (user) {
+            var Fuid = user.uid;
+            var TagFolder = "BE-commerce/User/"+Fuid;
+            var RED = firebase.database().ref(TagFolder).child('Position');
+            RED.on('value', function(snapshot) {
+            var Reddata = (snapshot.val());
+			       
+            if(Reddata=="Admin"){
+              
+            }
+            else{
+              window.location.href = "cart.html";
+            }
+          }); 
+        }
+        else {
+		window.location.href = "account.html"
+                    // No user is signed in.
+                  }
+                });
+
   
   var wurl = window.location.href;
-  var ScellIDS = wurl.replace("https://lunarmart.blogspot.com/p/sale-deatils.html?=", "")
+  var ScellIDS = wurl.replace("https://www.lunarmart.xyz/p/sale-deatils.html?=", "")
   var TagFolder = "BE-commerce/Purchase/"+ScellIDS;
   
   

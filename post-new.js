@@ -184,6 +184,7 @@ firebase.initializeApp(config);
           }); 
         }
         else {
+		window.location.href = "cart.html"
                     // No user is signed in.
                   }
                 });

@@ -39,6 +39,7 @@ var Indicatior = document.getElementById("Indicatior");
             var Y5 = (m)+" "+(n)+" "+(e);
      
            var Fname = document.getElementById("username").value;
+           var imgs = "https://ui-avatars.com/api/?color=ff0000&name="+Fname;
            var passw = document.getElementById("psw").value;
            var phoneNumber = document.getElementById("phoneNumber").value;
            var adress = document.getElementById("adress").value;
@@ -60,6 +61,7 @@ var Indicatior = document.getElementById("Indicatior");
                      Costpoint: 0,
                      Joindate: Y5,
                      adress: adress,
+		     img : imgs,
    
                    });
     Regform.style.transform = "translateX(300px)"

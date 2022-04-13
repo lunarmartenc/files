@@ -195,7 +195,7 @@ firebase.initializeApp(config);
   //////////////Firebase-POST DATA  LOAD//////////////
   var pathlink2 = window.location.href;
   
-  var Fpath2 = pathlink2.replace("https://lunarmart.blogspot.com/p/post-new.html?=", "");
+  var Fpath2 = pathlink2.replace("https://www.lunarmart.xyz/p/post-new.html?=", "");
   
   var TagFolder = "BE-commerce/Post/"+Fpath2;
         
@@ -322,7 +322,7 @@ var RED7 = firebase.database().ref(TagFolder).child('imgs3');
   var imgs2 = document.getElementById("imgs2").src;
   var imgs3 = document.getElementById("imgs3").src;
   
-  if (title=="" || content =="" || catagory =="" || price =="" || imgs ==""  || imgs == "https://lunarmart.blogspot.com/p/null"  ||  imgs =="https://i.gifer.com/ZZ5H.gif" )
+  if (title=="" || content =="" || catagory =="" || price =="" || imgs ==""  || imgs == "https://www.lunarmart.xyz/p/null"  ||  imgs =="https://i.gifer.com/ZZ5H.gif" )
   {
   
     alert("No Data Detect")
@@ -360,7 +360,7 @@ window.location.href = "draf-product.html"
   function Published(){
   
   
-      location.href = "https://lunarmart.blogspot.com/p/post-published.html?="+Fpath2;
+      location.href = "https://www.lunarmart.xyz/p/post-published.html?="+Fpath2;
   
   
   }

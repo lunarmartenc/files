@@ -38,6 +38,7 @@ var config = {
 firebase.initializeApp(config);
 
 
+        
                 var frb = firebase.auth();
                 frb.onAuthStateChanged(user => {
                   if (user) {
@@ -48,7 +49,7 @@ firebase.initializeApp(config);
             var Reddata = (snapshot.val());
 			       
             if(Reddata=="Admin"){
-         
+              
             }
             else{
               window.location.href = "cart.html";
@@ -56,6 +57,7 @@ firebase.initializeApp(config);
           }); 
         }
         else {
+		window.location.href = "cart.html"
                     // No user is signed in.
                   }
                 });

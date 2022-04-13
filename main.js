@@ -98,3 +98,13 @@ document.getElementById("mpay4").src = "https://drive.google.com/uc?export=downl
   
       }
   
+
+
+
+///////////////////Angular img lod//////////////
+     function loadImage() { 
+  document.getElementById('Exclusiveproduct').style.display = 'block';
+  document.getElementById('Futureproduct').style.display = 'block';
+  document.getElementById('Letest').style.display = 'block';
+  document.getElementById('Discountproduct').style.display = 'block';
+}

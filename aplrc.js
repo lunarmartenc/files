@@ -29,7 +29,7 @@ firebase.initializeApp(config);
   $scope.searchProfit   = '';
    $scope.showData = function( ){
   
-   $scope.itemsPerPage = 10;
+   $scope.itemsPerPage = 12;
    $scope.currentPage = 0;
    
    var live = "BE-commerce/Post";
@@ -347,11 +347,13 @@ angular.module('Discountproduct').filter('pagination', function(){
     var Relatedproduct = angular.module('Relatedproduct', [ "firebase"]);
   
     Relatedproduct.controller('Maincontollerrelatedproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
-  
+  var reletetcatagory = document.getElementById("reletedcotagory").innerHTML;
+   var Freletetcatagory = reletetcatagory.replace("Home / ", "");	    
+	    
     $scope.sortType     = 'ID'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchFish   = 'Live';
-  $scope.searchProfit   = '';
+  $scope.searchProfit   = Freletetcatagory;
    $scope.showData = function( ){
   
    $scope.itemsPerPage = 4;

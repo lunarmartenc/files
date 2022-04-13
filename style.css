@@ -1,4 +1,5 @@
- *{
+  
+  *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -856,8 +857,6 @@ display: none;
 
 
   a.cart {
-	width: 72px;
-	height: 72px;
 	-moz-border-radius: 36px;
 	-webkit-border-radius: 36px;
 	border-radius: 36px;
@@ -866,10 +865,7 @@ display: none;
 	color: #616161;
 	text-decoration: none;
 	position: relative;
-	right: 24px;
-	top: 36px;
 	display: block;
-	background-size: 36px;
 	box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
 	-moz-box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
 	-webkit-box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
@@ -886,17 +882,13 @@ a.cart > span {
 	-webkit-border-radius: 12px;
 	border-radius: 12px;
 	display: block;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	margin: auto;
 	background: rgb(250, 2, 2);
 }
 
 a.cart > span.counter {
-	left: 30px;
-	bottom: 48px;
+	left: 20px;
+	bottom: 15px;
 }
 
 

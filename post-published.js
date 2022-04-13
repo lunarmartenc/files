@@ -100,9 +100,7 @@ function updateBadge(alertNum){//To rerun the animation the element must be re-a
 
 function Onloddata() {
 
-var rand=()=>Math.random(0).toString(36).substr(2);
-var token =(length)=>(rand()+rand()+rand()+rand()).substr(0,length);
-var randomPath = (token(40));
+var randomPath = Date.now();
 
 document.getElementById("pathlink2").href = "post-new.html?="+randomPath;
 

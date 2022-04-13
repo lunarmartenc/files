@@ -38,10 +38,9 @@ var config = {
 firebase.initializeApp(config);
 
 
-        
                 var frb = firebase.auth();
                 frb.onAuthStateChanged(user => {
-                  if (user) {
+                  if (user) {	  
             var Fuid = user.uid;
             var TagFolder = "BE-commerce/User/"+Fuid;
             var RED = firebase.database().ref(TagFolder).child('Position');
@@ -49,7 +48,7 @@ firebase.initializeApp(config);
             var Reddata = (snapshot.val());
 			       
             if(Reddata=="Admin"){
-              
+              document.getElementById("mainWpAdmin").style.display = "block";
             }
             else{
               window.location.href = "cart.html";
@@ -57,7 +56,7 @@ firebase.initializeApp(config);
           }); 
         }
         else {
-		window.location.href = "cart.html"
+		window.location.href = "account.html"
                     // No user is signed in.
                   }
                 });

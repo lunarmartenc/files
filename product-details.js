@@ -14,7 +14,7 @@ firebase.initializeApp(config);
   //////////////Homepage Hide//////////////////////
  var wurl= window.location.href;
 
- if(wurl== "https://www.lunarmart.xyz/" || wurl== "https://www.lunarmart.xyz?m=1"){
+ if(wurl== "https://www.lunarmart.xyz/" || wurl== "https://www.lunarmart.xyz/?m=1"){
 document.getElementById("FullBody").style.display ="none";
 
  }

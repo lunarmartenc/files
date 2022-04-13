@@ -131,7 +131,7 @@ var table = document.getElementById("CartEstimate"), sumVal = 0;
           
     var CartEstimate = sumVal;
 
- var FTotal = +CartEstimate+Reddata;   
+ var FTotal = CartEstimate+Reddata;   
 document.getElementById("Fsubtotal").innerHTML = CartEstimate;
 document.getElementById("Ftotal").innerHTML = FTotal;
 

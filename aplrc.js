@@ -23,7 +23,7 @@ firebase.initializeApp(config);
   
   Letest.controller('Maincontollerletest', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
   
-    $scope.sortType     = 'date'; // set the default sort type
+    $scope.sortType     = 'Date'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchFish   = 'Live';
   $scope.searchProfit   = '';
@@ -103,7 +103,7 @@ firebase.initializeApp(config);
 
 Futureproduct.controller('Maincontollerfutureproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
 
-  $scope.sortType     = 'date'; // set the default sort type
+  $scope.sortType     = 'Date'; // set the default sort type
 $scope.sortReverse  = false;  // set the default sort order
 $scope.searchFish   = 'Live';
 $scope.searchProfit   = 'Future';
@@ -185,7 +185,7 @@ angular.module('Futureproduct').filter('pagination', function(){
   
   Exclusiveproduct.controller('Maincontollerexclusiveproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
   
-    $scope.sortType     = 'date'; // set the default sort type
+    $scope.sortType     = 'Date'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchFish   = 'Live';
   $scope.searchProfit   = 'Exclusive';
@@ -265,7 +265,7 @@ angular.module('Futureproduct').filter('pagination', function(){
 
   Discountproduct.controller('Maincontollerdiscountproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
 
-  $scope.sortType     = 'date'; // set the default sort type
+  $scope.sortType     = 'Date'; // set the default sort type
 $scope.sortReverse  = false;  // set the default sort order
 $scope.searchFish   = 'Live';
 $scope.searchProfit   = 'Discount';
@@ -348,7 +348,7 @@ angular.module('Discountproduct').filter('pagination', function(){
   
     Relatedproduct.controller('Maincontollerrelatedproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
   
-    $scope.sortType     = 'date'; // set the default sort type
+    $scope.sortType     = 'Date'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchFish   = 'Live';
   $scope.searchProfit   = '';
@@ -432,7 +432,7 @@ angular.module('Discountproduct').filter('pagination', function(){
   
     Cartproduct.controller('Maincontollercartproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
   
-    $scope.sortType     = 'date'; // set the default sort type
+    $scope.sortType     = 'Date'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchFish   = '';
   $scope.searchProfit   = '';
@@ -518,7 +518,7 @@ angular.module('Discountproduct').filter('pagination', function(){
     
 var userIDS = localStorage.getItem("UserIDS");
 
-    $scope.sortType     = 'date'; // set the default sort type
+    $scope.sortType     = 'Date'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchFish   = userIDS;
   $scope.searchProfit   = '';
@@ -600,7 +600,7 @@ var userIDS = localStorage.getItem("UserIDS");
   
     Checkoutdetailsproduct.controller('Maincontollercheckoutdetailsproduct', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
   
-    $scope.sortType     = 'date'; // set the default sort type
+    $scope.sortType     = 'Date'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchFish   = '';
   $scope.searchProfit   = '';
@@ -692,7 +692,7 @@ var targeturl = "https://"+hostname+pathname+"?=";
 var wurl = window.location.href;
 var targetresult = wurl.replace(targeturl, "");
 
-    $scope.sortType     = 'date'; // set the default sort type
+    $scope.sortType     = 'Date'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchFish   = 'Live';
   $scope.searchProfit   = targetresult;

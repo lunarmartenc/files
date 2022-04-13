@@ -39,22 +39,25 @@
       
       
       
-      var config = {
-            apiKey: "AIzaSyCWGbJi9qeD7h6BPhAKBoWupHv21Tge3ck",
-          authDomain: "effort-5efac.firebaseapp.com",
-          databaseURL: "https://effort-5efac.firebaseio.com",
-          projectId: "effort-5efac",
-          storageBucket: "effort-5efac.appspot.com",
-          messagingSenderId: "771931121287",
-          appId: "1:771931121287:web:9fe9abdcab7c369f277a22",
-          measurementId: "G-GLD9CY5VPF"};
-        firebase.initializeApp(config);
-      
+   var config = {
+    apiKey: "AIzaSyDtjDsi9I3ODEHeVwu-36blfr2eVratWLk",
+    authDomain: "lunarmart-e2410.firebaseapp.com",
+    databaseURL: "https://lunarmart-e2410-default-rtdb.firebaseio.com",
+    projectId: "lunarmart-e2410",
+    storageBucket: "lunarmart-e2410.appspot.com",
+    messagingSenderId: "168416542459",
+    appId: "1:168416542459:web:f87ecc908ab27668b27a5e",
+    measurementId: "G-1SR896B8LE"
+        };
+firebase.initializeApp(config);
 
 
+
+     
                 var frb = firebase.auth();
                 frb.onAuthStateChanged(user => {
-                  if (user) {	  
+                  if (user) {
+			 
             var Fuid = user.uid;
             var TagFolder = "BE-commerce/User/"+Fuid;
             var RED = firebase.database().ref(TagFolder).child('Position');
@@ -62,7 +65,7 @@
             var Reddata = (snapshot.val());
 			       
             if(Reddata=="Admin"){
-              document.getElementById("mainWpAdmin").style.display = "block";
+               document.getElementById("mainWpAdmin").style.display = "block";
             }
             else{
               window.location.href = "cart.html";
@@ -74,6 +77,9 @@
                     // No user is signed in.
                   }
                 });
+
+
+
 
 
 

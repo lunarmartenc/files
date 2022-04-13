@@ -365,7 +365,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
   //////////////////Auto-Click//////////////////
       
   var text = document.getElementById("ptlink").innerHTML;
-    var wurl = position = text.search("lunarmart.blogspot.com"); ///It's Protect To Multi post
+    var wurl = position = text.search("lunarmart.xyz"); ///It's Protect To Multi post
   
   function dopublish(){
     if(wurl == -1){

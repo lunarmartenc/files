@@ -422,6 +422,84 @@ angular.module('Saledetailsproduct').filter('pagination', function(){
 })();
 
 
+////////User-16////
+//////////////////////////
+(function() {
+  
+  var Userarealist = angular.module('Userarealist', [ "firebase"]);
+
+Userarealist.controller('Maincontolleruserarealist', ["$scope", "$firebaseArray", "$interval", function ($scope, $firebaseArray, $interval) {
+
+  $scope.sortType     = 'date'; // set the default sort type
+$scope.sortReverse  = false;  // set the default sort order
+$scope.searchFish   = '';
+$scope.searchProfit   = '';
+ $scope.showData = function( ){
+
+ $scope.itemsPerPage = 10;
+ $scope.currentPage = 0;
+ 
+ var live = "BE-commerce/User";
+var ref = firebase.database().ref().child(live);
+
+    $scope.pages = $firebaseArray(ref);
+     $scope.range = function() {
+    var rangeSize = 4;
+    var ps = [];
+    var begin;
+
+    begin = $scope.currentPage;
+    if ( begin > $scope.pageCount()-rangeSize ) {
+      begin = $scope.pageCount()-rangeSize+1;
+    }
+
+    for (var i=begin; i<begin+rangeSize; i++) {
+      ps.push(i);
+    }
+    return ps;
+  };
+
+  $scope.prevPage = function() {
+    if ($scope.currentPage > 0) {
+      $scope.currentPage--;
+    }
+  };
+
+  $scope.DisablePrevPage = function() {
+    return $scope.currentPage === 0 ? "disabled" : "";
+  };
+
+  $scope.pageCount = function() {
+    return Math.ceil($scope.pages.length/$scope.itemsPerPage)-1;
+  };
+
+  $scope.nextPage = function() {
+    if ($scope.currentPage < $scope.pageCount()) {
+      $scope.currentPage++;
+    }
+  };
+
+  $scope.DisableNextPage = function() {
+    return $scope.currentPage === $scope.pageCount() ? "disabled" : "";
+  };
+
+  $scope.setPage = function(n) {
+    $scope.currentPage = n;
+  };
+};
+
+
+}]);
+
+angular.module('Userarealist').filter('pagination', function(){
+  return function(input, begin) {
+    begin = parseInt(begin, 10);
+    return input.slice(begin);
+  };
+  
+});
+})();
+
 
 
  var nineDiv = document.getElementById('Draftproduct');
@@ -429,6 +507,7 @@ angular.module('Saledetailsproduct').filter('pagination', function(){
  var elevenDiv = document.getElementById('Saleordersproduct');
  var twelveDiv = document.getElementById('Salecompliteproduct');
  var thirteenDiv = document.getElementById('Saledetailsproduct');
+var sixteenDiv = document.getElementById('Userarealist');
     
        // manually boostrapping the second app
        angular.element(document).ready(function() {
@@ -437,5 +516,6 @@ angular.module('Saledetailsproduct').filter('pagination', function(){
               angular.bootstrap(elevenDiv, [ 'Saleordersproduct' ]);
               angular.bootstrap(twelveDiv, [ 'Salecompliteproduct' ]);
               angular.bootstrap(thirteenDiv, [ 'Saledetailsproduct' ]);
+	      angular.bootstrap(sixteenDiv, [ 'Userarealist' ]);
 			  });
 	   

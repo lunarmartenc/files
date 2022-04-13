@@ -700,7 +700,7 @@ var targetresult = wurl.replace(targeturl, "");
   $scope.searchProfit   = targetresult;
    $scope.showData = function( ){
   
-   $scope.itemsPerPage = 10;
+   $scope.itemsPerPage = 12;
    $scope.currentPage = 0;
    
    var live = "BE-commerce/Post";

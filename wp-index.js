@@ -141,7 +141,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
       '<meta name="robots" content="noindex,nofollow">'+
   
       '<!----------Face-book--------->'+
-      '<meta property="og:url"                content="https://wesuzz.blogspot.com" />'+
+      '<meta property="og:url"                content="https://www.lunarmart.xyz/" />'+
       '<meta property="og:type"               content="article" />'+
       '<meta property="og:title"              content="'+title+'" />'+
       '<meta property="og:description"        content="'+content+'" />'+
@@ -154,7 +154,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
   '<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>'+
   
   '</head>'+
-  '<body><div id="FullBody">'+
+  '<body><div id="FullBody"><img src="'+imgs+'" width="0px">'+
      
       '<div class="conteainer"><div class="nevbar">'+
           '<div class="logo"><a href="/"><img src="https://drive.google.com/uc?export=download&id=1N7DSq9ecj8O7yxSuaZHnrxqFrgKQjrnf" width="125px" alt="none"></div>'+
@@ -166,7 +166,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
               '<li><a href="/" style="margin-left: 15px;">About</a></li>'+
               '<li><a href="/p/account.html" style="margin-left: 15px;">Account</a></li>'+
           '</ul></nav>'+
-          '<a href="#" class="cart"><img src="https://drive.google.com/uc?export=download&id=1JwuhTXUky7dEdHRjYmVuKNadnICZ7G91" width="30px" height="30px"><span style="display: none;" id="cardbandge" class="counter"></span></a>'+
+          '<a href="/p/cart.html" class="cart"><img src="https://drive.google.com/uc?export=download&id=1JwuhTXUky7dEdHRjYmVuKNadnICZ7G91" width="30px" height="30px"><span style="display: none;" id="cardbandge" class="counter"></span></a>'+
           '<img src="https://drive.google.com/uc?export=download&id=1Mh3ComNECck578M7LByP0Tr7eIMhUsmv" class="menu-icon" onclick="menutoggle()">'+
           '</div>'+
      '</div>'+
@@ -181,23 +181,23 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
   
            '<div class="small-img-row">'+
               '<div class="small-img-col">'+
-                  '<img src="'+imgs+'" width="100%" class="small-img">'+
+                  '<img src="'+imgs+'" width="100%" onerror="this.style.display='+"'none'"+'" class="small-img">'+
                    '</div>'+
                '<div class="small-img-col">'+
-              '<img src="'+imgs1+'" width="100%" class="small-img">'+
+              '<img src="'+imgs1+'" width="100%" onerror="this.style.display='+"'none'"+'" class="small-img">'+
                '</div>'+
                '<div class="small-img-col">'+
-                  '<img src="'+imgs2+'" width="100%" class="small-img">'+
+                  '<img src="'+imgs2+'" width="100%" onerror="this.style.display='+"'none'"+'" class="small-img">'+
                    '</div>'+
                    '<div class="small-img-col">'+
-                      '<img src="'+imgs3+'" width="100%" class="small-img">'+
+                      '<img src="'+imgs3+'" width="100%" onerror="this.style.display='+"'none'"+'" class="small-img">'+
                        '</div>'+
            '</div>'+
            
   
           '</div>'+
           '<div class="col-2">'+
-            '<p>Home / '+catagory+'</p>'+
+            '<p id="reletedcotagory">Home / '+catagory+'</p>'+
             '<p style="display: none;" id="ProductID">'+productID+'</p>'+
             '<h1 id="titles">'+title+'</h1>'+
             '<h4>&#2547;<b id="productPrice"></b></h4>'+
@@ -224,7 +224,7 @@ var RED21 = firebase.database().ref(TagFolder).child('subcatagory');
   '<div class="small-contanier">'+
      '<div class="row row-2">'+
   '<h2>Related product</h2>'+
-  '<a href="/p/cotagory.html?='+catagory+'">View More&#8594;</a></div>'+
+  '<a href="/p/catagory.html?='+catagory+'">View More&#8594;</a></div>'+
   '</div>'+
   '<!--------Related products----->'+
   '<div id="Relatedproduct" class="small-contanier">'+

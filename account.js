@@ -52,7 +52,7 @@ var Indicatior = document.getElementById("Indicatior");
                      Name : Fname,
                      Email : Femail,
                      password : passw,
-                     Position : "Premium",
+                     Position : "Customers",
                      phoneNumber: phoneNumber,
                      AC : 5,
                      Id : Fuid,
